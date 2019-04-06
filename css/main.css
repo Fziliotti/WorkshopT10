@@ -1,0 +1,130 @@
+body{
+  background-color: #022B3A;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  color:white;
+  transition: 0.5s all;
+  
+}
+
+#app{
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.header{
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #226A85;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #48b1bf, #226A85);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #48b1bf, #226A85); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:#f1f1f1;
+}
+
+.todo-item{
+  /* user-select: none; */
+  font-size: 1.6rem;
+  cursor:pointer;
+  color:#fff;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:cadetblue;
+  text-transform: capitalize;
+}
+
+.linkSite{
+  color:#1F7A8C;
+}
+
+.linkSite:hover{
+  text-decoration: none;
+}
+
+.lblCadastrar{
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+
+.btnPLUS-text{
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background-color: rgb(243, 2, 2);
+  cursor: pointer;
+}
+
+.btn{
+  cursor: pointer;
+}
+
+.text-dark{
+  color:black;
+  transition: 0.s all;
+}
+
+.tema-light{
+  color: black;
+  background-color: #e1e1e1;
+  transition: 0.5s all;
+}
+
+
+.footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+
+
+
+.simbol{
+  font-size: 3rem;
+  color: black;
+  animation: colorir 6s alternate-reverse ease-in-out infinite;
+}
+
+#boxCronometro{
+  opacity: 1;
+  transition: .3s all  ease-in-out;
+}
+
+.esconder{
+  opacity: 0 !important;
+}
+
+
+
+
+/* ANIMATION */
+@keyframes colorir{
+  0%{
+    color: black;
+  }
+
+  50%{
+    color:darkblue;
+  }
+
+  100%{
+    color: #fff;
+  }
+}
+
+
+/* Scroll */
+::-webkit-scrollbar{
+  background: black;
+  width: 6px;
+  
+}
+::-webkit-scrollbar-thumb{
+  background:#e1e1e1;
+  
+}

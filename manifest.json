@@ -1,0 +1,31 @@
+{
+  "name": "Workshop To-Do",
+  "short_name": "T10ToDo",
+  "display": "standalone",
+  "background_color": "#666",
+  "lang": "pt-BR",
+  "theme_color": "#0f1419",
+  "description": "PWA T10=)",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "imgs/launcher-icon-1x.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "imgs/launcher-icon-2x.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "imgs/launcher-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html"
+}
+
+
+

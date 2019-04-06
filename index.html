@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<!-- METAS -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="App Lista de afazeres usando Javascript Puro - Fziliotti">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#317EFB" />
+	<!-- LINKS -->
+	<link rel="icon" sizes="192x192" href="imgs/launcher-icon-2x.png">
+	<link href="manifest.json" rel="manifest" type="UTF-8">
+	<link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="css/bootstrap4.css">
+	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+	<link rel="stylesheet" href="css/sweetalert.css">
+	<link rel="stylesheet" href="css/main.css">
+	<title>T10 - PWA</title>
+
+	<script type="text/javascript">
+		if ("serviceWorker" in navigator) {
+			navigator.serviceWorker.register("sw.js").then(function (registration) {
+				console.info("Service Worker registration successful with scope: ", registration.scope);
+			}).catch(function (err) {
+				console.error("Service Worker registration failed: ", err);
+			});
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<header class="header py-4 mb-4">
+		<h1 class="text-center"> <span class="simbol">
+				<</span> Lista de Tarefas T10 <span class="simbol">/>
+			</span>
+		</h1>
+	</header>
+
+	<main class="container">
+		<div id="app">
+			<label class="lblCadastrar" for="novaTarefa">Nome da tarefa: </label>
+
+			<div class="input-group mb-3">
+				<input id="novaTarefa" type="text" maxlength="38" class="form-control" placeholder="ex: passear com o cachorro..">
+				<div class="input-group-append">
+					<button class="btnPLUS btn btn-success btn-lg" onclick="addTodo()"><span class="btnPLUS-text">+</span></button>
+				</div>
+			</div>
+
+			<section class="tarefas">
+				<ul id="render" class="my-4 list-group">
+				</ul>
+			</section>
+		
+			<footer class="footer mt-3">
+				<span class="titleFooter text-muted">Desenvolvido por <a class="linkSite" target="_BLANK" href="https://t10lab.com/">
+						T10 lab</a> =)
+				</span>
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button id="toggleTema" onclick="mudarTema()" class="btn btn-light btn-sm">Mudar-Tema</button>
+				</div>
+			</footer>
+		</div>
+	</main>
+		
+
+	<script src="js/toDo.js"></script>
+	<script src="js/temas.js"></script>
+	<script src="js/sweetalert2.js"></script>
+
+		
+</body>
+
+</html>
